@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cajero.AbonarccEvent">
+   <children>
+      <Label alignment="CENTER" focusTraversable="false" layoutY="2.0" prefHeight="25.0" prefWidth="272.0" style="-fx-background-color: TEAL;" text="Abonar cuenta por cobrar" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="24.0" layoutY="234.0" onAction="#salir" style="-fx-background-color: #d02323;" text="Salir" textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.leftAnchor="24.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="274.0" layoutY="234.0" style="-fx-background-color: #3480bf;" text="Abonar" onAction="#abonar" textFill="WHITE" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="31.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="36.0" layoutY="63.0" text="Nombre:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombre" layoutX="98.0" layoutY="63.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="abonar" focusColor="TEAL" layoutX="290.0" layoutY="151.0" prefHeight="25.0" prefWidth="145.0" >
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label layoutX="56.0" layoutY="109.0" text="Total:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="235.0" layoutY="63.0" text="Cedula:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="cedula" layoutX="295.0" layoutY="63.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="total" layoutX="98.0" layoutY="109.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="109.0" text="Abonado:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="abonado" layoutX="295.0" layoutY="109.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="226.0" layoutY="154.0" text="Abonar:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="200.0" text="Fecha tope:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="fecha" layoutX="98.0" layoutY="200.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="55.0" layoutY="154.0" text="Resto:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="98.0" layoutY="344.0" prefHeight="20.0" prefWidth="225.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="239.0" layoutY="200.0" text="Resto:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nresto" layoutX="295.0" layoutY="200.0" text="Labela">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="253.0" text="Pago con:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="216.0" layoutY="253.0" text="Referencia:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="pago" layoutX="93.0" layoutY="248.0" prefHeight="25.0" prefWidth="108.0" focusColor="TEAL" >
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0" >
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXComboBox>
+      <JFXTextField fx:id="ref" layoutX="295.0" layoutY="248.0" focusColor="TEAL" >
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label fx:id="resto" layoutX="98.0" layoutY="154.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

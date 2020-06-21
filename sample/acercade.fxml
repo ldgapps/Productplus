@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.acercaevent">
+   <children>
+      <Label alignment="CENTER" layoutX="8.0" layoutY="6.0" prefHeight="17.0" prefWidth="586.0" style="-fx-background-color: TEAL" text="Acerca de Product+" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow color="#000000a2" height="44.72" radius="15.93" />
+         </effect>
+      </Label>
+      <Label layoutX="11.0" layoutY="45.0" prefHeight="71.0" prefWidth="578.0" style="-fx-background-color: #ffffff;" text="Product+: Software administrativo para pequeños negocios" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" right="10.0" />
+         </padding>
+         <effect>
+            <DropShadow color="#00000062" />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" graphicTextGap="5.0" layoutY="117.0" prefHeight="27.0" prefWidth="600.0" text="Creado por: Luis D. González D." textAlignment="CENTER" textFill="TEAL">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="515.0" layoutY="120.0" text="Versión 1.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Hyperlink  alignment="CENTER" fx:id="link" layoutX="156.0" layoutY="325.0" prefHeight="20.0" prefWidth="306.0" text="www.facebook.com/ldgapps">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="172.0" fitWidth="563.0" layoutX="156.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logoldgapps3.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

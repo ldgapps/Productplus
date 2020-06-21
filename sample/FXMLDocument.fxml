@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="350.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" stylesheets="@../extras/estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" alignment="CENTER" layoutX="384.0" layoutY="304.0" minHeight="16" minWidth="69" prefHeight="17.0" prefWidth="194.0" textFill="#cd3434">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <JFXButton buttonType="RAISED" focusTraversable="false" layoutX="395.0" layoutY="234.0" onAction="#iniciar" prefHeight="40.0" prefWidth="150.0" stylesheets="@../extras/estilos.css" text="Iniciar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+        <JFXTextField fx:id="usuario" alignment="CENTER" focusColor="TEAL" layoutX="395.0" layoutY="108.0" prefHeight="25.0" prefWidth="150.0">
+            <unFocusColor>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#008080" />
+                        <Stop color="#29E89D" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </unFocusColor>
+            <font>
+                <Font size="13.0" />
+            </font>
+        </JFXTextField>
+      <JFXPasswordField fx:id="contra" alignment="CENTER" focusColor="#008080" layoutX="395.0" layoutY="190.0" prefWidth="150.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#008080" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+         <font>
+            <Font size="13.0" />
+         </font></JFXPasswordField>
+
+      <Label alignment="CENTER" focusTraversable="false" layoutX="395.0" layoutY="72.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #008080;" text="Usuario" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" focusTraversable="false" layoutX="395.0" layoutY="150.0" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #008080;" text="Contraseña" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="339.0" layoutY="14.0" prefHeight="17.0" prefWidth="262.0" text="Iniciar sesión" textFill="TEAL">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="250.0" fitWidth="419.0" layoutX="43.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@product+.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutY="2.0" prefHeight="70.0" prefWidth="354.0" style="-fx-background-color: TEAL;" text="Product+" textFill="WHITE" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+         <effect>
+            <DropShadow color="#616161" radius="4.75" width="0.0" />
+         </effect>
+      </Label>
+      <Line endX="14.0" endY="634.7929077148438" layoutX="339.0" layoutY="14.0" startX="14.0" startY="283.79290771484375" stroke="TEAL" strokeWidth="4.0" AnchorPane.bottomAnchor="0.0" />
+    </children>
+</AnchorPane>

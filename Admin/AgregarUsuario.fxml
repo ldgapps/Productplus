@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="400.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AgregausuEvent">
+   <children>
+      <Label alignment="CENTER" layoutY="6.0" prefHeight="17.0" prefWidth="550.0" style="-fx-background-color: TEAL;" text="Agregar usuario" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="142.0" layoutY="263.0" onAction="#agregar" style="-fx-background-color: #3480bf;" text="Agregar" textFill="WHITE" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="tipo" focusColor="TEAL" layoutX="134.0" layoutY="188.0" prefHeight="25.0" prefWidth="146.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="188.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXComboBox>
+      <JFXPasswordField fx:id="contra" focusColor="TEAL" layoutX="231.0" layoutY="104.0" AnchorPane.topAnchor="104.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXPasswordField>
+      <JFXTextField fx:id="usuario" focusColor="TEAL" layoutX="22.0" layoutY="104.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="104.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="22.0" layoutY="58.0" prefHeight="17.0" prefWidth="135.0" style="-fx-background-color: TEAL;" text="Nombre" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="58.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="231.0" layoutY="58.0" prefHeight="17.0" prefWidth="135.0" style="-fx-background-color: TEAL;" text="Contraseña" textFill="WHITE" AnchorPane.topAnchor="58.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="139.0" layoutY="155.0" prefHeight="17.0" prefWidth="135.0" style="-fx-background-color: TEAL;" text="Tipo" textFill="WHITE" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="155.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="100.0" layoutY="243.0" prefHeight="20.0" prefWidth="213.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

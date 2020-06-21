@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.EditarcontraEvent">
+   <children>
+      <JFXPasswordField fx:id="contra" focusColor="TEAL" layoutX="101.0" layoutY="190.0" prefHeight="25.0" prefWidth="146.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#d8e85e" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXPasswordField>
+      <Label alignment="CENTER" layoutY="6.0" prefHeight="17.0" prefWidth="550.0" style="-fx-background-color: TEAL;" text="Cambiar clave" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="116.0" layoutY="282.0" onAction="#eliminar" style="-fx-background-color: #3480bf;" text="Aceptar" textFill="WHITE" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="110.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXPasswordField fx:id="ncontra" focusColor="TEAL" layoutX="102.0" layoutY="84.0" prefHeight="25.0" prefWidth="146.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#d8e85e" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXPasswordField>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="55.0" prefHeight="20.0" prefWidth="239.0" style="-fx-background-color: TEAL;" text="Nueva contraseña" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="67.0" layoutY="27.0" prefHeight="20.0" prefWidth="213.0" textFill="TRANSPARENT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="59.0" layoutY="165.0" prefHeight="20.0" prefWidth="239.0" style="-fx-background-color: TEAL;" text="Contraseña antigua" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombre" alignment="CENTER" layoutX="3.0" layoutY="245.0" prefHeight="17.0" prefWidth="350.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

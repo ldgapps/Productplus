@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="350.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.EditarusuEvent">
+   <children>
+      <JFXPasswordField fx:id="contra" focusColor="TEAL" layoutX="100.0" layoutY="168.0" prefHeight="25.0" prefWidth="146.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXPasswordField>
+      <Label alignment="CENTER" layoutY="6.0" prefHeight="17.0" prefWidth="550.0" style="-fx-background-color: TEAL;" text="Editar nombre" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="13.0" layoutY="243.0" onAction="#salir" style="-fx-background-color: #d02323;" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/ic_reply_white_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="221.0" layoutY="243.0" onAction="#eliminar" style="-fx-background-color: #3480bf;" text="Aceptar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="usuario" focusColor="TEAL" layoutX="102.0" layoutY="84.0" prefHeight="25.0" prefWidth="146.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="55.0" prefHeight="20.0" prefWidth="239.0" style="-fx-background-color: TEAL;" text="Nuevo nombre" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="59.0" layoutY="140.0" prefHeight="20.0" prefWidth="239.0" style="-fx-background-color: TEAL;" text="Contraseña" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombre" alignment="CENTER" layoutX="-3.0" layoutY="217.0" prefHeight="17.0" prefWidth="360.0">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="128.0" layoutY="254.0" text="" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="ventana" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Cajero.CajaEvent">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="Menu">
+          <items>
+              <MenuItem mnemonicParsing="false" onAction="#cobrar" text="Nueva cuenta por cobrar" />
+              <MenuItem mnemonicParsing="false" onAction="#cuentascobrar" text="Cuentas por cobrar" />
+          </items>
+        </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#cambiacontra" text="Contraseña" />
+                  <MenuItem mnemonicParsing="false" onAction="#cambiausuario" text="Nombre de usuario" />
+              </items>
+          </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <items>
+      <AnchorPane id="Content" minHeight="-1.0" minWidth="200.0" prefHeight="545.0" prefWidth="350.0">
+        <children>
+          <Label alignment="CENTER" layoutX="7.0" layoutY="1.0" prefHeight="27.0" prefWidth="210.0" style="-fx-background-color: TEAL;" text="Añadir a la lista" textAlignment="CENTER" textFill="WHITE" wrapText="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" fx:id="x5" />
+                     </font>
+                  </Label>
+            <JFXComboBox fx:id="viveres" focusColor="TEAL" layoutX="3.0" layoutY="107.0" prefHeight="25.0" prefWidth="186.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0">
+                <unFocusColor>
+                    <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                            <Stop color="TEAL" />
+                            <Stop color="#29E89D" offset="1.0" />
+                        </stops>
+                    </LinearGradient>
+                </unFocusColor>
+            </JFXComboBox>
+            <JFXComboBox fx:id="charcuteria" focusColor="TEAL" layoutX="11.0" layoutY="249.0" prefHeight="25.0" prefWidth="226.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0">
+                <unFocusColor>
+                    <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                            <Stop color="TEAL" />
+                            <Stop color="#29E89D" offset="1.0" />
+                        </stops>
+                    </LinearGradient>
+                </unFocusColor>
+            </JFXComboBox>
+                  <Label alignment="CENTER" layoutX="9.0" layoutY="36.0" prefHeight="17.0" prefWidth="186.0" style="-fx-background-color: TEAL;" text="Víveres" textFill="WHITE" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="3.0" layoutY="193.0" prefHeight="17.0" prefWidth="186.0" style="-fx-background-color: TEAL;" text="Charcuteria" textFill="WHITE" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="add" layoutX="206.0" layoutY="149.0" mnemonicParsing="false" onAction="#agregaviveres" style="-fx-background-color: #1ec291;" text="" textFill="#d6a317" AnchorPane.rightAnchor="5.0">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+            <JFXTextField fx:id="buscavive" focusColor="TEAL" layoutX="3.0" layoutY="69.0" onKeyReleased="#buscarvi" prefHeight="25.0" prefWidth="188.0" promptText="Buscar viveres" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="56.0">
+                <unFocusColor>
+                    <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                            <Stop color="TEAL" />
+                            <Stop color="#29E89D" offset="1.0" />
+                        </stops>
+                    </LinearGradient>
+                </unFocusColor>
+            </JFXTextField>
+            <JFXTextField fx:id="buscacharcu" focusColor="TEAL" layoutX="3.0" layoutY="221.0" onKeyReleased="#buscachr" prefHeight="25.0" prefWidth="188.0" promptText="Buscar charcuteria" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="56.0">
+                <unFocusColor>
+                    <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                            <Stop color="TEAL" />
+                            <Stop color="#29E89D" offset="1.0" />
+                        </stops>
+                    </LinearGradient>
+                </unFocusColor>
+            </JFXTextField>
+            <Button layoutX="206.0" layoutY="294.0" mnemonicParsing="false" onAction="#agregacharcuteria" style="-fx-background-color: #1ec291;" text="" textFill="#d6a317" AnchorPane.rightAnchor="5.0">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../img/add.png" />
+                        </image>
+                    </ImageView>
+                </graphic></Button>
+            <JFXTextField fx:id="cantichar" focusColor="TEAL" layoutX="68.0" layoutY="294.0" prefHeight="25.0" prefWidth="150.0" text="0.00" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="52.0">
+                <unFocusColor>
+                    <LinearGradient endX="1.0" endY="1.0">
+                        <stops>
+                            <Stop color="TEAL" />
+                            <Stop color="#29E89D" offset="1.0" />
+                        </stops>
+                    </LinearGradient>
+                </unFocusColor>
+            </JFXTextField>
+                  <Label layoutX="10.0" layoutY="155.0" text="Cantidad:" />
+                  <Label layoutX="23.0" layoutY="298.0" text="Precio:" />
+            <JFXButton fx:id="full" layoutX="10.0" layoutY="340.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #282827;" text="Pantalla completa" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="8.0">
+                <graphic>
+                    <ImageView fitHeight="25.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../img/ic_zoom_in_white_24dp.png" />
+                        </image>
+                    </ImageView>
+                </graphic>
+                <font>
+                    <Font name="System Bold" size="14.0" />
+                </font>
+            </JFXButton>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="212.0" layoutY="221.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
+                     <image>
+                        <Image url="@../img/buscar.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="212.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="10.0">
+                     <image>
+                        <Image url="@../img/buscar.png" />
+                     </image>
+                  </ImageView>
+                  <JFXTextField fx:id="cantivive" focusColor="TEAL" layoutX="68.0" layoutY="151.0" prefHeight="25.0" prefWidth="150.0" text="0" AnchorPane.leftAnchor="68.0" AnchorPane.rightAnchor="52.0">
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="TEAL" />
+                              <Stop color="#29E89D" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+        </children>
+      </AnchorPane>
+        <AnchorPane prefHeight="551.0" prefWidth="533.0">
+          <children>
+            <Label alignment="CENTER" layoutX="9.0" layoutY="14.0" prefHeight="27.0" prefWidth="391.0" style="-fx-background-color: TEAL;" text="Lista de venta" textAlignment="CENTER" textFill="WHITE" wrapText="false" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font size="18.0" fx:id="x7" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_assignment_white_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Label>
+                  <TableView fx:id="ventatabla" layoutX="16.0" layoutY="41.0" onKeyPressed="#elimina" prefHeight="630.0" prefWidth="463.0" stylesheets="@../extras/Estilos_Tabla.css" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="41.0">
+                    <columns>
+                      <TableColumn fx:id="tipop" prefWidth="75.0" text="Tipo" />
+                      <TableColumn fx:id="codigol" prefWidth="75.0" text="Codigo" />
+                        <TableColumn fx:id="productol" prefWidth="120.0" text="Producto" />
+                        <TableColumn fx:id="cantidadl" prefWidth="75.0" text="Cantidad" />
+                        <TableColumn fx:id="precioul" prefWidth="75.0" text="Precio U" />
+                        <TableColumn fx:id="preciotl" minWidth="0.0" prefWidth="67.0" text="Precio T" />
+                        <TableColumn fx:id="elimina" prefWidth="75.0" />
+                    </columns>
+                  </TableView>
+                  <JFXButton layoutX="180.0" layoutY="687.0" mnemonicParsing="false" onAction="#eliminart" style="-fx-background-color: #cc1313;" text="Limpiar" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="180.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/borrar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+          </children>
+        </AnchorPane>
+        <AnchorPane maxWidth="-Infinity" prefHeight="551.0" prefWidth="350.0">
+               <children>
+                  <Label fx:id="tprecio" alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="38.0" prefHeight="27.0" prefWidth="166.0" text="0.00" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label alignment="CENTER" layoutX="27.0" layoutY="216.0" prefHeight="16.0" prefWidth="144.0" style="-fx-background-color: TEAL;" text="Metodo de pago:" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                   <JFXComboBox fx:id="pago" focusColor="TEAL" layoutX="27.0" layoutY="248.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                       <unFocusColor>
+                           <LinearGradient endX="1.0" endY="1.0">
+                               <stops>
+                                   <Stop color="TEAL" />
+                                   <Stop color="#29E89D" offset="1.0" />
+                               </stops>
+                           </LinearGradient>
+                       </unFocusColor>
+                   </JFXComboBox>
+                   <JFXTextField fx:id="ref" focusColor="TEAL" layoutX="27.0" layoutY="314.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                       <unFocusColor>
+                           <LinearGradient endX="1.0" endY="1.0">
+                               <stops>
+                                   <Stop color="TEAL" />
+                                   <Stop color="#29E89D" offset="1.0" />
+                               </stops>
+                           </LinearGradient>
+                       </unFocusColor>
+                   </JFXTextField>
+                  <Label alignment="CENTER" layoutX="27.0" layoutY="294.0" prefHeight="17.0" prefWidth="144.0" style="-fx-background-color: TEAL;" text="Referencia:" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <JFXButton layoutX="24.0" layoutY="385.0" mnemonicParsing="false" onAction="#vender" prefHeight="39.0" prefWidth="200.0" style="-fx-background-color: TEAL;" text="Vender" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_add_shopping_cart_white_24dp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></JFXButton>
+                   <JFXTextField fx:id="cliente" focusColor="TEAL" layoutX="24.0" layoutY="112.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                       <unFocusColor>
+                           <LinearGradient endX="1.0" endY="1.0">
+                               <stops>
+                                   <Stop color="TEAL" />
+                                   <Stop color="#29E89D" offset="1.0" />
+                               </stops>
+                           </LinearGradient>
+                       </unFocusColor>
+                   </JFXTextField>
+                   <JFXTextField fx:id="ci" focusColor="TEAL" layoutX="24.0" layoutY="176.0" prefHeight="25.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                       <unFocusColor>
+                           <LinearGradient endX="1.0" endY="1.0">
+                               <stops>
+                                   <Stop color="TEAL" />
+                                   <Stop color="#29E89D" offset="1.0" />
+                               </stops>
+                           </LinearGradient>
+                       </unFocusColor>
+                   </JFXTextField>
+                   <Label alignment="CENTER" layoutX="28.0" layoutY="84.0" prefHeight="20.0" prefWidth="150.0" style="-fx-background-color: TEAL;" text="Nombre y Apellido:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                       <font>
+                           <Font size="14.0" />
+                       </font>
+                   </Label>
+                   <Label alignment="CENTER" layoutX="27.0" layoutY="156.0" prefHeight="20.0" prefWidth="144.0" style="-fx-background-color: TEAL;" text="DNI:" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                       <font>
+                           <Font size="14.0" />
+                       </font>
+                   </Label>
+                  <Label alignment="CENTER" layoutX="3.0" layoutY="14.0" prefHeight="27.0" prefWidth="210.0" style="-fx-background-color: TEAL;" text="Precio:" textAlignment="CENTER" textFill="WHITE" wrapText="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font size="18.0" fx:id="x51" />
+                     </font>
+                  </Label>
+                  <Label fx:id="error" layoutY="349.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="23.0" layoutY="441.0" mnemonicParsing="false" onAction="#cerrar_sesion" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #cc1313;" text="Cerrar sesión" textFill="#fffdfd">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/cerrar.png" />
+                           </image>
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children></AnchorPane>
+      </items>
+    </SplitPane>
+    <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" style="-fx-background-color: #fff;" VBox.vgrow="NEVER">
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+         <children>
+            <Label text="Bienvenido:">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label fx:id="usuario" text="usuario">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Pane prefWidth="50.0" />
+            <Label text="Empresa:">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Label fx:id="empresa" text="LDGApps">
+               <font>
+                  <Font size="13.0" />
+               </font></Label>
+            <Pane layoutX="124.0" layoutY="13.0" prefWidth="50.0" />
+            <Label text="Product+ Software V 1.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutX="287.0" layoutY="13.0" prefWidth="50.0" />
+            <JFXButton onAction="#acerca" style="-fx-background-color: TEAL;" text="Acerca" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ic_info_outline_white_36dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+    </HBox>
+  </children>
+</VBox>

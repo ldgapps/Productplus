@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="450.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.EditarproductoEvent">
+   <children>
+      <Label alignment="CENTER" focusTraversable="false" layoutY="2.0" prefHeight="25.0" prefWidth="272.0" style="-fx-background-color: TEAL;" text="Editar producto" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="166.0" layoutY="280.0" onAction="#edita" style="-fx-background-color: #3480bf;" text="Cambiar" textFill="WHITE" AnchorPane.bottomAnchor="31.0" AnchorPane.rightAnchor="165.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="codigo" alignment="CENTER" layoutX="19.0" layoutY="100.0" prefHeight="20.0" prefWidth="135.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <JFXTextField fx:id="producton" focusColor="TEAL" layoutX="284.0" layoutY="97.0" prefHeight="17.0" prefWidth="135.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#d7d374" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <JFXTextField fx:id="marcan" focusColor="TEAL" layoutX="19.0" layoutY="183.0">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#d7d374" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXTextField>
+      <Label alignment="CENTER" layoutX="19.0" layoutY="157.0" prefHeight="20.0" prefWidth="135.0" style="-fx-background-color: TEAL;" text="Marca" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="17.0" layoutY="64.0" prefHeight="20.0" prefWidth="135.0" style="-fx-background-color: TEAL;" text="Codigo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="286.0" layoutY="64.0" prefHeight="20.0" prefWidth="135.0" style="-fx-background-color: TEAL;" text="Producto" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="284.0" layoutY="157.0" prefHeight="20.0" prefWidth="135.0" style="-fx-background-color: TEAL;" text="Tipo" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="tipo" alignment="CENTER" layoutX="284.0" layoutY="187.0" prefHeight="20.0" prefWidth="135.0" text="Tipo2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="-3.0" layoutY="236.0" prefHeight="17.0" prefWidth="456.0" text="Label">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

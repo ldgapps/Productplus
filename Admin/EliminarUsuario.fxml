@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.EliminausuEvent">
+   <children>
+      <JFXPasswordField fx:id="contra" layoutX="100.0" layoutY="168.0" prefHeight="25.0" prefWidth="146.0" focusColor="TEAL">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXPasswordField>
+      <Label alignment="CENTER" layoutY="6.0" prefHeight="17.0" prefWidth="550.0" style="-fx-background-color: TEAL;" text="Eliminar usuario" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="13.0" layoutY="247.0" onAction="#salir" style="-fx-background-color: #d02323;" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/ic_reply_white_24dp.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="219.0" layoutY="247.0" onAction="#eliminar" style="-fx-background-color: #3480bf;" text="Eliminar" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/cerrar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="usuario" layoutX="102.0" layoutY="84.0" prefHeight="25.0" prefWidth="146.0" focusColor="TEAL">
+         <unFocusColor>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="TEAL" />
+                  <Stop color="#29E89D" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </unFocusColor>
+      </JFXComboBox>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="55.0" prefHeight="20.0" prefWidth="239.0" style="-fx-background-color: TEAL;" text="Usuario a eliminar" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="72.0" layoutY="35.0" prefHeight="20.0" prefWidth="213.0" textFill="TRANSPARENT">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="59.0" layoutY="140.0" prefHeight="20.0" prefWidth="239.0" style="-fx-background-color: TEAL;" text="Contraseña" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="nombre" alignment="CENTER" layoutX="-2.0" layoutY="210.0" prefHeight="19.0" prefWidth="350.0" text="">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

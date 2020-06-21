@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="550.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AbonarcpEvent">
+   <children>
+      <Label alignment="CENTER" focusTraversable="false" layoutY="2.0" prefHeight="25.0" prefWidth="272.0" style="-fx-background-color: TEAL;" text="Abonar cuenta por pagar" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="220.0" layoutY="388.0" onAction="#abonar" style="-fx-background-color: #3480bf;" text="Abonar" textFill="WHITE" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/agregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label fx:id="resta" layoutX="200.0" layoutY="344.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" alignment="CENTER" layoutY="354.0" prefHeight="20.0" prefWidth="550.0" text="acp">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="41.0" layoutY="50.0" prefHeight="286.0" prefWidth="459.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+        <columnConstraints>
+          <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Proveedor:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="proveedor" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Factura:" GridPane.columnIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="factura" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Total:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="total" maxWidth="1.7976931348623157E308" text="          " GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Abonado:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Resto:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="resto" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Abonar:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="abonarn" focusColor="TEAL" prefHeight="25.0" prefWidth="135.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#eda80b" />
+                        <Stop color="#29E89D" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+            </JFXTextField>
+            <Label text="Fecha tope:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="fecha" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Resto:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="nresto" maxWidth="1.7976931348623157E308" text="nresto" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Pago con:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="pago" focusColor="TEAL" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#eda80b" />
+                        <Stop color="#29E89D" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </JFXComboBox>
+            <Label text="Referencia:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="ref" focusColor="TEAL" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <unFocusColor>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#eda80b" />
+                        <Stop color="#29E89D" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </unFocusColor>
+            </JFXTextField>
+            <JFXTextArea fx:id="abono" focusColor="WHITE" maxWidth="1.7976931348623157E308" unFocusColor="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
